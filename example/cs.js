@@ -6,20 +6,22 @@
 //离线
 var url = "http://localhost:8080/geoserver/gwc/service/tms/1.0.0/tms:river@EPSG:900913@pbf/{z}/{x}/{y}.pbf";
 var mvtLayer = createMVTWithStyle(Cesium, ol, createMapboxStreetsV6Style, {
-    url: url,
-    // key: key
-});
+  url: url,
+  // key: key
+})
+console.log(mvtLayer)
+
 var viewer = new Cesium.Viewer('cesiumContainer', {
-    imageryProvider: mvtLayer,
-    baseLayerPicker: false,
-    timeline: false,
-    animation: false,
-    navigationHelpButton: false,
-    homeButton: false,
-    sceneModePicker: false,
-    geocoder: false,
-    fullscreenButton: false,
-    selectionIndicator: false
+  imageryProvider: mvtLayer,
+  baseLayerPicker: false,
+  timeline: false,
+  animation: false,
+  navigationHelpButton: false,
+  homeButton: false,
+  sceneModePicker: false,
+  geocoder: false,
+  fullscreenButton: false,
+  selectionIndicator: false
 });
 // viewer.imageryLayers.addImageryProvider(new Cesium.ArcGisMapServerImageryProvider({
 //     url: 'https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer'
