@@ -26,6 +26,6 @@ var viewer = new Cesium.Viewer('cesiumContainer', {
 // viewer.imageryLayers.addImageryProvider(new Cesium.ArcGisMapServerImageryProvider({
 //     url: 'https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer'
 // }), -1);
-// viewer.scene.globe.baseColor = new Cesium.Color(1.0, 1.0, 1.0, 1.0);
+viewer.scene.globe.baseColor = new Cesium.Color(1.0, 1.0, 1.0, 1.0);
 // 除去cesium标志
 viewer._cesiumWidget._creditContainer.style.display = 'none'

@@ -1,5 +1,5 @@
 function createMVTWithStyle(cesium, ol, createMapboxStreetsV6Style, options) {
-  // console.log(cesium, ol, createMapboxStreetsV6Style, options)
+  console.log(cesium, ol, createMapboxStreetsV6Style, options)
   function init(options) {
     //使用webmercator投影
     this._tilingScheme = cesium.defined(options.tilingScheme) ? options.tilingScheme : new cesium.WebMercatorTilingScheme()
@@ -34,118 +34,120 @@ function createMVTWithStyle(cesium, ol, createMapboxStreetsV6Style, options) {
     this._cacheSize = 1e3
   }
 
-  function defineProperties() {
-    init.prototype.proxy = { get: function () { } }
-    init.prototype.tileWidth = {
+  return cesium.defineProperties(init.prototype, {
+    proxy: {
+      get: function () { }
+    },
+    tileWidth: {
       get: function () {
         return this._tileWidth
       }
-    }
-    init.prototype.tileHeight = {
+    },
+    tileHeight: {
       get: function () {
         return this._tileHeight
       }
-    }
-    init.prototype.maximumLevel = {
+    },
+    maximumLevel: {
       get: function () { }
-    }
-    init.prototype.minimumLevel = {
+    },
+    minimumLevel: {
       get: function () { }
-    }
-    init.prototype.tilingScheme = {
+    },
+    tilingScheme: {
       get: function () {
         return this._tilingScheme
       }
-    }
-    init.prototype.rectangle = {
+    },
+    rectangle: {
       get: function () {
         return this._tilingScheme.rectangle
       }
-    }
-    init.prototype.tileDiscardPolicy = {
+    },
+    tileDiscardPolicy: {
       get: function () { }
-    }
-    init.prototype.errorEvent = {
+    },
+    errorEvent: {
       get: function () {
         return this._errorEvent
       }
-    }
-    init.prototype.ready = {
+    },
+    ready: {
       get: function () {
         return !0
       }
-    }
-    init.prototype.readyPromise = {
+    },
+    readyPromise: {
       get: function () {
         return this._readyPromise
       }
-    }
-    init.prototype.credit = {
+    },
+    credit: {
       get: function () { }
-    }
-    init.prototype.hasAlphaChannel = {
+    },
+    hasAlphaChannel: {
       get: function () {
         return !0
       }
     }
-  }
-  console.log(init.prototype);
-  return init.prototype.requestImage = function (x, y, z) {
-    // console.log(x,y,z)
-    var update_canvas = function (x, y, z, tilequeue) {
-      for (var canvas = tilequeue.head; canvas && (canvas.xMvt != x || canvas.yMvt != y || canvas.zMvt != z);) canvas = canvas.replacementNext;
-      return canvas
-    }(x, y, z, this._tileQueue);
-    console.log()
-    if (update_canvas) return update_canvas;
-    var that = this
-    var url = this._url;
-    //存在key与不存在key的url拼接方法
-    url = this._key ? url.replace("{x}", x).replace("{y}", y).replace("{z}", z).replace("{k}", this._key) : url.replace("{x}", x).replace("{y}", y).replace("{z}", z);
+  }),
+    //获取xyz
+    init.prototype.requestImage = function (x, y, z) {
+      // console.log(x,y,z)
+      var update_canvas = function (x, y, z, tilequeue) {
+        for (var canvas = tilequeue.head; canvas && (canvas.xMvt != x || canvas.yMvt != y || canvas.zMvt != z);) canvas = canvas.replacementNext;
+        return canvas
+      }(x, y, z, this._tileQueue);
+      console.log()
+      if (update_canvas) return update_canvas;
+      var that = this
+      var url = this._url;
+      //存在key与不存在key的url拼接方法
+      url = this._key ? url.replace("{x}", x).replace("{y}", y).replace("{z}", z).replace("{k}", this._key) : url.replace("{x}", x).replace("{y}", y).replace("{z}", z);
 
-    //初始化绘制区域
-    (function (x, y, z) {
-      f_x.Resource.createIfNeeded(url).fetchArrayBuffer().then(function (arraybuffer) {
-        // console.log(arraybuffer)
-        //绘制区域
-        var canvas = document.createElement("canvas");
-        canvas.width = 512, canvas.height = 512;
-        var ctx = canvas.getContext("2d")
+      //初始化绘制区域
+      (function (x, y, z) {
+        cesium.Resource.createIfNeeded(url).fetchArrayBuffer().then(function (arraybuffer) {
+          // console.log(arraybuffer)
+          //绘制区域
+          var canvas = document.createElement("canvas");
+          canvas.width = 512, canvas.height = 512;
+          var ctx = canvas.getContext("2d")
 
-        //转为features
-        var features = that._mvtParser.readFeatures(arraybuffer)
-        // console.log(features)
+          //转为features
+          var features = that._mvtParser.readFeatures(arraybuffer)
+          // console.log(features)
 
-        //styles
-        var styles = that._styleFun()
-        // console.log(styles) 
+          //styles
+          var styles = that._styleFun()
+          // console.log(styles) 
 
-        //
-        var render = new ol.render.canvas.ReplayGroup(0, [0, 0, 4096, 4096], 8, true, 100)
-        // console.log(render)
+          //
+          var render = new ol.render.canvas.ReplayGroup(0, [0, 0, 4096, 4096], 8, true, 100)
+          // console.log(render)
 
-        for (var i = 0; i < features.length; i++) {
-          var single_feature = features[i];
-          // console.log(single_feature)
-          // console.log(styles(features[i], that._resolutions[z]))
+          for (var i = 0; i < features.length; i++) {
+            var single_feature = features[i];
+            // console.log(single_feature)
+            // console.log(styles(features[i], that._resolutions[z]))
 
-          var styletypes = styles(features[i], that._resolutions[z])
-          for (p = 0; p < styletypes.length; p++) ol.renderer.vector.renderFeature_(render, single_feature, styletypes[p],
-            16)
-        }
-        return render.finish(), render.replay(ctx, that._pixelRatio, that._transform, 0, {}, that._replays, !0), that._tileQueue.count > that._cacheSize &&
-          function (ol, x) {
-            for (var y = ol.tail; ol.count > x && f_x.defined(y);) {
-              var z = y.replacementPrevious;
-              delete y, y = null, y = z
-            }
-          }(that._tileQueue, that._cacheSize / 2), canvas.xMvt = x, canvas.yMvt = y, canvas.zMvt = z, that._tileQueue.markTileRendered(canvas),
-          delete render, render = null, canvas
-      })
-    })(x, y, z)
+            var styletypes = styles(features[i], that._resolutions[z])
+            for (p = 0; p < styletypes.length; p++) ol.renderer.vector.renderFeature_(render, single_feature, styletypes[p],
+              16)
+          }
+          return render.finish(), render.replay(ctx, that._pixelRatio, that._transform, 0, {}, that._replays, !0), that._tileQueue.count > that._cacheSize &&
+            function (ol, x) {
+              for (var y = ol.tail; ol.count > x && cesium.defined(y);) {
+                var z = y.replacementPrevious;
+                delete y, y = null, y = z
+              }
+            }(that._tileQueue, that._cacheSize / 2), canvas.xMvt = x, canvas.yMvt = y, canvas.zMvt = z, that._tileQueue.markTileRendered(canvas),
+            delete render, render = null, canvas
+        })
+      })(x, y, z)
 
-  },
-    defineProperties(),
+    },
+
     new init(options)
 }
 
