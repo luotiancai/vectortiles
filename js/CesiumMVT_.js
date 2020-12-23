@@ -107,7 +107,7 @@ function createMVTWithStyle(cesium, ol, createMapboxStreetsV6Style, options) {
 
 			//初始化绘制区域
 			(function (x, y, z) {
-				f_x.Resource.createIfNeeded(url).fetchArrayBuffer().then(function (arraybuffer) {
+				cesium.Resource.createIfNeeded(url).fetchArrayBuffer().then(function (arraybuffer) {
 					// console.log(arraybuffer)
 					//绘制区域
 					var canvas = document.createElement("canvas");
@@ -137,7 +137,7 @@ function createMVTWithStyle(cesium, ol, createMapboxStreetsV6Style, options) {
 					}
 					return render.finish(), render.replay(ctx, that._pixelRatio, that._transform, 0, {}, that._replays, !0), that._tileQueue.count > that._cacheSize &&
 						function (ol, x) {
-							for (var y = ol.tail; ol.count > x && f_x.defined(y);) {
+							for (var y = ol.tail; ol.count > x && cesium.defined(y);) {
 								var z = y.replacementPrevious;
 								delete y, y = null, y = z
 							}
