@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="82415d64-6ac1-410a-a000-254c570f20ae" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="loadMVT.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/example/loadMVT.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="13" column="28" lean-forward="true" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cs.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/example/cs.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="9" column="15" lean-forward="true" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mapbox-streets-v6-style.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/mapbox/mapbox-streets-v6-style.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CesiumMVT_.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/CesiumMVT_.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="31" selection-start-column="31" selection-end-column="31" />
+              <folding>
+                <element signature="n#!!block;n#n#0;n#!!block;n#createMVTWithStyle#0" />
+                <element signature="n#!!block;n#l#0;n#!!block;n#createMVTWithStyle#0" />
+                <element signature="e#1386#1413#0" />
+                <element signature="e#1428#1486#0" />
+                <element signature="e#1502#1561#0" />
+                <element signature="e#1579#1606#0" />
+                <element signature="e#1624#1651#0" />
+                <element signature="e#1669#1730#0" />
+                <element signature="e#1745#1816#0" />
+                <element signature="e#1839#1866#0" />
+                <element signature="e#1882#1941#0" />
+                <element signature="e#1952#1997#0" />
+                <element signature="e#2015#2076#0" />
+                <element signature="e#2088#2115#0" />
+                <element signature="e#2136#2181#0" />
+                <element signature="e#2319#2442#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ol-debug.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/ol4/ol-debug.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1897020">
+              <caret line="63287" column="38" selection-start-line="63287" selection-start-column="38" selection-end-line="63287" selection-end-column="38" />
+              <folding>
+                <element signature="e#1763185#1764033#0" />
+                <element signature="e#1793388#1793887#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>v.enableRightToLeftDetection = !1;</find>
+      <find>ol</find>
+      <find>openlayers</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/lib/mapbox/mapbox-streets-v6-style.js" />
+        <option value="$PROJECT_DIR$/lib/ol4/ol-cs.js" />
+        <option value="$PROJECT_DIR$/lib/ol4/node.js" />
+        <option value="$PROJECT_DIR$/example/cs.js" />
+        <option value="$PROJECT_DIR$/js/CesiumMVT_.js" />
+        <option value="$PROJECT_DIR$/example/loadMVT.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="109" />
+    <option name="y" value="306" />
+    <option name="width" value="1761" />
+    <option name="height" value="1104" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="loadMVT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="loadMVT" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="loadMVT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="loadMVT" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="loadMVT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="loadMVT" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="loadMVT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="loadMVT" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="loadMVT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="loadMVT" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="Cesium" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="loadMVT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="loadMVT" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="ol4" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lyp\Documents\Tencent Files\873054267\FileRecv\loadMVT\lib\ol4" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="node.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="node.js" working-dir="$PROJECT_DIR$/lib/ol4" />
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.node.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="82415d64-6ac1-410a-a000-254c570f20ae" name="Default" comment="" />
+      <created>1564991387447</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1564991387447</updated>
+      <workItem from="1564991388862" duration="3127000" />
+      <workItem from="1564995150369" duration="268000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3395000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1455" height="935" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14376321" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.22653316" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32916147" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="4" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/example/loadMVT.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="10" column="15" lean-forward="true" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/cs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/mapbox/mapbox-streets-v6-style.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/CesiumMVT_.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="31" selection-start-column="31" selection-end-column="31" />
+          <folding>
+            <element signature="n#!!block;n#n#0;n#!!block;n#createMVTWithStyle#0" />
+            <element signature="n#!!block;n#l#0;n#!!block;n#createMVTWithStyle#0" />
+            <element signature="e#1386#1413#0" />
+            <element signature="e#1428#1486#0" />
+            <element signature="e#1502#1561#0" />
+            <element signature="e#1579#1606#0" />
+            <element signature="e#1624#1651#0" />
+            <element signature="e#1669#1730#0" />
+            <element signature="e#1745#1816#0" />
+            <element signature="e#1839#1866#0" />
+            <element signature="e#1882#1941#0" />
+            <element signature="e#1952#1997#0" />
+            <element signature="e#2015#2076#0" />
+            <element signature="e#2088#2115#0" />
+            <element signature="e#2136#2181#0" />
+            <element signature="e#2319#2442#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ol4/ol-debug.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1898610">
+          <caret line="63287" column="38" lean-forward="true" selection-start-line="63287" selection-start-column="38" selection-end-line="63287" selection-end-column="38" />
+          <folding>
+            <element signature="e#1763185#1764033#0" />
+            <element signature="e#1793388#1793887#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Cesium/Cesium.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="104" column="26" selection-start-line="104" selection-start-column="26" selection-end-line="104" selection-end-column="26" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ol4/node.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ol4/ol-cs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ol4/ol-debug.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1897020">
+          <caret line="63287" column="38" selection-start-line="63287" selection-start-column="38" selection-end-line="63287" selection-end-column="38" />
+          <folding>
+            <element signature="e#1763185#1764033#0" />
+            <element signature="e#1793388#1793887#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/CesiumMVT_.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="31" selection-start-column="31" selection-end-column="31" />
+          <folding>
+            <element signature="n#!!block;n#n#0;n#!!block;n#createMVTWithStyle#0" />
+            <element signature="n#!!block;n#l#0;n#!!block;n#createMVTWithStyle#0" />
+            <element signature="e#1386#1413#0" />
+            <element signature="e#1428#1486#0" />
+            <element signature="e#1502#1561#0" />
+            <element signature="e#1579#1606#0" />
+            <element signature="e#1624#1651#0" />
+            <element signature="e#1669#1730#0" />
+            <element signature="e#1745#1816#0" />
+            <element signature="e#1839#1866#0" />
+            <element signature="e#1882#1941#0" />
+            <element signature="e#1952#1997#0" />
+            <element signature="e#2015#2076#0" />
+            <element signature="e#2088#2115#0" />
+            <element signature="e#2136#2181#0" />
+            <element signature="e#2319#2442#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/mapbox/mapbox-streets-v6-style.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/cs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="9" column="15" lean-forward="true" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/loadMVT.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="13" column="28" lean-forward="true" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
