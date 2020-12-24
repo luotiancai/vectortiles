@@ -2,10 +2,10 @@ function createMVTWithStyle(cesium, ol, createMapboxStreetsV6Style, options) {
 	console.log(cesium, ol, createMapboxStreetsV6Style, options)
 	function init(options) {
 		//使用webmercator投影
-		this._tilingScheme = cesium.defined(options.tilingScheme) ? options.tilingScheme : new cesium.WebMercatorTilingScheme()
+		this._tilingScheme = new cesium.WebMercatorTilingScheme()
 
-		this._tileWidth = cesium.defaultValue(options.tileWidth, 512)
-		this._tileHeight = cesium.defaultValue(options.tileHeight, 512)
+		this._tileWidth = 512
+		this._tileHeight = 512
 
 		this._readyPromise = cesium.when.resolve(!0)
 
@@ -23,10 +23,10 @@ function createMVTWithStyle(cesium, ol, createMapboxStreetsV6Style, options) {
 		//切片范围
 		var z = this._tilingScheme._rectangleSouthwestInMeters
 		var l = this._tilingScheme._rectangleNortheastInMeters
-		var extent = [z.x, z.y, l.x, l.y];
+		this._extent = [z.x, z.y, l.x, l.y];
 
 		//切片的一些配置
-		this._resolutions = ol.tilegrid.resolutionsFromExtent(extent, 22, this._tileWidth)
+		this._resolutions = ol.tilegrid.resolutionsFromExtent(this._extent, 22, this._tileWidth)
 		this._pixelRatio = 1
 		this._transform = [.125, 0, 0, .125, 0, 0]
 		this._replays = ["Default", "Image", "Polygon", "LineString", "Text"]
@@ -35,9 +35,6 @@ function createMVTWithStyle(cesium, ol, createMapboxStreetsV6Style, options) {
 	}
 
 	return cesium.defineProperties(init.prototype, {
-		proxy: {
-			get: function () { }
-		},
 		tileWidth: {
 			get: function () {
 				return this._tileWidth
@@ -47,12 +44,6 @@ function createMVTWithStyle(cesium, ol, createMapboxStreetsV6Style, options) {
 			get: function () {
 				return this._tileHeight
 			}
-		},
-		maximumLevel: {
-			get: function () { }
-		},
-		minimumLevel: {
-			get: function () { }
 		},
 		tilingScheme: {
 			get: function () {
@@ -64,9 +55,6 @@ function createMVTWithStyle(cesium, ol, createMapboxStreetsV6Style, options) {
 				return this._tilingScheme.rectangle
 			}
 		},
-		tileDiscardPolicy: {
-			get: function () { }
-		},
 		errorEvent: {
 			get: function () {
 				return this._errorEvent
@@ -74,7 +62,7 @@ function createMVTWithStyle(cesium, ol, createMapboxStreetsV6Style, options) {
 		},
 		ready: {
 			get: function () {
-				return !0
+				return true
 			}
 		},
 		readyPromise: {
@@ -82,16 +70,13 @@ function createMVTWithStyle(cesium, ol, createMapboxStreetsV6Style, options) {
 				return this._readyPromise
 			}
 		},
-		credit: {
-			get: function () { }
-		},
 		hasAlphaChannel: {
 			get: function () {
-				return !0
+				return true
 			}
 		}
 	}),
-	//获取xyz
+		//获取xyz
 		init.prototype.requestImage = function (x, y, z) {
 			// console.log(x,y,z)
 			var update_canvas = function (x, y, z, tilequeue) {
@@ -118,22 +103,23 @@ function createMVTWithStyle(cesium, ol, createMapboxStreetsV6Style, options) {
 					var features = that._mvtParser.readFeatures(arraybuffer)
 					// console.log(features)
 
-					//styles
+					//引入styles方法
 					var styles = that._styleFun()
 					// console.log(styles) 
 
-					//
+					//绘制过程
 					var render = new ol.render.canvas.ReplayGroup(0, [0, 0, 4096, 4096], 8, true, 100)
 					// console.log(render)
 
-					for ( var i = 0; i < features.length; i++) {
+					for (var i = 0; i < features.length; i++) {
 						var single_feature = features[i];
 						// console.log(single_feature)
 						// console.log(styles(features[i], that._resolutions[z]))
 
 						var styletypes = styles(features[i], that._resolutions[z])
-						for (p = 0; p < styletypes.length; p++) ol.renderer.vector.renderFeature_(render, single_feature, styletypes[p],
-							16)
+						for (var p = 0; p < styletypes.length; p++) {
+							ol.renderer.vector.renderFeature_(render, single_feature, styletypes[p], 16)
+						}
 					}
 					return render.finish(), render.replay(ctx, that._pixelRatio, that._transform, 0, {}, that._replays, !0), that._tileQueue.count > that._cacheSize &&
 						function (ol, x) {
