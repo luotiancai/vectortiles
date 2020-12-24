@@ -34,7 +34,7 @@ function createMVTWithStyle(cesium, ol, createMapboxStreetsV6Style, options) {
 		this._cacheSize = 1e3
 	}
 
-	return cesium.defineProperties(init.prototype, {
+	return Object.defineProperties(init.prototype, {
 		tileWidth: {
 			get: function () {
 				return this._tileWidth
@@ -53,11 +53,6 @@ function createMVTWithStyle(cesium, ol, createMapboxStreetsV6Style, options) {
 		rectangle: {
 			get: function () {
 				return this._tilingScheme.rectangle
-			}
-		},
-		errorEvent: {
-			get: function () {
-				return this._errorEvent
 			}
 		},
 		ready: {
@@ -92,6 +87,7 @@ function createMVTWithStyle(cesium, ol, createMapboxStreetsV6Style, options) {
 
 			//初始化绘制区域
 			(function (x, y, z) {
+				// console.log(cesium.Resource.createIfNeeded(url))
 				cesium.Resource.createIfNeeded(url).fetchArrayBuffer().then(function (arraybuffer) {
 					// console.log(arraybuffer)
 					//绘制区域
