@@ -10,8 +10,8 @@ var mvtLayer = createMVTWithStyle(Cesium, ol, createMapboxStreetsV6Style, {
     // key: key
 });
 var viewer = new Cesium.Viewer('cesiumContainer', {
-    imageryProvider: mvtLayer,
-    terrianProvider:false,
+    // imageryProvider: mvtLayer,
+    terrianProvider: false,
     baseLayerPicker: false,
     timeline: false,
     animation: false,
@@ -22,10 +22,7 @@ var viewer = new Cesium.Viewer('cesiumContainer', {
     fullscreenButton: false,
     selectionIndicator: false
 });
-// viewer.scene.imageryLayers.addImageryProvider(mvtLayer)
-// viewer.imageryLayers.addImageryProvider(new Cesium.ArcGisMapServerImageryProvider({
-//     url: 'https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer'
-// }), -1);
+viewer.scene.imageryLayers.addImageryProvider(mvtLayer)
 viewer.scene.globe.baseColor = new Cesium.Color(1.0, 1.0, 1.0, 1.0);
 // 除去cesium标志
 viewer._cesiumWidget._creditContainer.style.display = 'none'
